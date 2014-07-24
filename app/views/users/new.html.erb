@@ -1,1 +1,11 @@
 <h3>Signup</h3>
+
+<%= form_tag signup_path do %>
+	<%= label_tag "Name" %>
+	<%= text_field_tag :name %>
+
+	<%= label_tag "Email" %>
+	<%= text_field_tag :email %>
+	<br/>
+	<%= submit_tag "Create my account" %>
+<% end %>
