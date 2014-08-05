@@ -1,0 +1,4 @@
+<% if session[:user_id] %>
+	<% user = User.find(session[:user_id]) %>
+	<h2>Welcome, <%= user.name %>!</h2>
+<% end %>
