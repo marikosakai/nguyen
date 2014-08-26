@@ -10,6 +10,7 @@
 					<% if session[:user_id].blank? %>
 						<li><%= link_to "Sign in", signin_path %></li>
 					<% else %>
+						<li><%= link_to "Tweet", new_tweet_path %></li>
 						<li><%= link_to "Sign Out", signout_path, method: :delete %></li>
 					<% end %>
 				</ul>
