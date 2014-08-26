@@ -1,0 +1,19 @@
+<div class="row">
+	<aside class="span4">
+		<section>
+			<h1>
+				<%= @user.name %>
+			</h1>
+		</section>
+	</aside>
+
+	<div class="span8">
+		<ul class="tweets"> 
+			<% @tweets.each do |tweet| %>
+			<li>
+			<%= tweet.content %>
+			</li>
+			<% end %>
+		</ul>
+	</div>
+</div>

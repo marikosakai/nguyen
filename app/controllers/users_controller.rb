@@ -10,4 +10,11 @@ class UsersController < ApplicationController
 		flash[:notice] = "Your account has been created."
 		redirect_to root_path
 	end
+
+	def show
+		@user = User.find_by_id(params[:id])
+		@tweets = @user.tweets
+
+
+	end
 end
