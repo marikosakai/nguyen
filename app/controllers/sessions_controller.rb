@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 			if user.authenticate(params[:password])
 				session[:user_id] = user.id
 				flash[:notice] = "You are signed in."
-				redirect_to dashboard_path
+				redirect_to user_path(user)
 			else
 				flash[:notice] = "Wrong password."
 				redirect_to signin_path
